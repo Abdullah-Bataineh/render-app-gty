@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/chanel")
+@CrossOrigin(origins = "*")
 public class ChanelController {
     @Autowired
    private ChanelService chanelService;
