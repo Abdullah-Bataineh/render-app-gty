@@ -1,5 +1,7 @@
 package com.GTY.app.Services;
 import com.GTY.app.Model.Chanel;
+
+import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,6 +16,7 @@ public class ChanelService {
     private ChanelRepository chanelRepository;
 
     public Chanel setChanel(Chanel chanel){
+        chanel.setPhoto(Base64.getDecoder().decode(chanel.getPhoto()));
         return chanelRepository.save(chanel);
     }
     public List<Chanel> getAllChanel(){
@@ -28,7 +31,7 @@ public class ChanelService {
 
         if (existingChanel != null) {
             existingChanel.setChanelName(chanel.getChanelName());
-            existingChanel.setPhoto(chanel.getPhoto());
+            existingChanel.setPhoto(Base64.getDecoder().decode(chanel.getPhoto()));
             existingChanel.setStreamId(chanel.getStreamId());
 
             return chanelRepository.save(existingChanel);
