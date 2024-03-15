@@ -1,8 +1,9 @@
 package com.GTY.app.Services;
+import com.GTY.app.Model.Chanel;
 import java.util.List;
 import java.util.Optional;
 
-import com.GTY.app.Model.Chanel;
+
 import com.GTY.app.Repository.ChanelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

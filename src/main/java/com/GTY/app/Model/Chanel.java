@@ -20,8 +20,9 @@ public class Chanel {
     private long id;
     @Column(name = "chanelname")
     private String chanelName;
-    @Column(name = "photo",length = 20000)
-    private String Photo;
+    @Column(name = "photo")
+    @Lob
+    private byte[] Photo;
     @Column(name = "streamid")
     private String streamId;
 }
