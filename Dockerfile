@@ -1,16 +1,5 @@
-FROM ubuntu:latest AS bulid
+FROM amazoncorretto:17-alpine-jdk
 
-RUN apt-get update
-RUN apt-get install openjdk-17-jdk -y
-COPY . .
+COPY target/app-0.0.1-SNAPSHOT.jar app.jar
 
-RUN apt-get install maven -y
-RUN mvn clean install
-
-FROM openjdk:17-jdk-slim
-
-EXPOSE 8080
-
-COPY --from=bulid /target/app-0.0.1-SNAPSHOT.jar app.jar
-
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java" , "-jar" , "/app.jar"]
