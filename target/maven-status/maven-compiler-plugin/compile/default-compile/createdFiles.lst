@@ -1,0 +1,9 @@
+com\GTY\app\AppApplication.class
+com\GTY\app\Controller\ChanelController.class
+com\GTY\app\Repository\ChanelRepository.class
+com\GTY\app\Controller\ServerController.class
+com\GTY\app\Repository\ServerRepository.class
+com\GTY\app\Model\Chanel.class
+com\GTY\app\Model\Server.class
+com\GTY\app\Services\ChanelService.class
+com\GTY\app\Services\ServerService.class
