@@ -22,6 +22,10 @@ public class Chanel {
     private String chanelName;
     @Column(name = "photo",length = 20000)
     private String Photo;
-    @Column(name = "streamid")
-    private String streamId;
+    @Column(name = "highstreamid")
+    private String highStreamId;
+    @Column(name = "mediumstreamid")
+    private String mediumStreamId;
+    @Column(name = "lowstreamid")
+    private String lowStreamId;
 }

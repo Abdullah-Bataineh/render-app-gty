@@ -29,7 +29,9 @@ public class ChanelService {
         if (existingChanel != null) {
             existingChanel.setChanelName(chanel.getChanelName());
             existingChanel.setPhoto(chanel.getPhoto());
-            existingChanel.setStreamId(chanel.getStreamId());
+            existingChanel.setHighStreamId(chanel.getHighStreamId());
+            existingChanel.setMediumStreamId(chanel.getMediumStreamId());
+            existingChanel.setLowStreamId(chanel.getLowStreamId());
 
             return chanelRepository.save(existingChanel);
         } else {
